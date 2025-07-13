@@ -33,7 +33,6 @@ pipeline {
             }
         }
 
-    stages {
         stage('Checkout Test Repo') {
             steps {
                 checkout scm
