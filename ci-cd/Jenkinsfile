@@ -35,8 +35,6 @@ pipeline {
         stage('Build & Run Tests') {
             steps {
                 withMaven(maven: 'Maven 3') {
-
-
                     sh """
                          mvn clean test -D"app.url=${env.APP_URL}"  -D"splunk.token=${env.SPLUNK_TOKEN}"  -D"splunk.host=${env.SPLUNK_HOST}"  -D"splunk.index=${env.SPLUNK_INDEX}"
                     """
