@@ -9,9 +9,9 @@ pipeline {
     }
 
     environment {
-        APP_URL       = "${params.APP_URL ?: 'http://localhost:8080'}"
+        APP_URL       = "${params.APP_URL ?: 'http://host.docker.internal:8080'}"
         SPLUNK_TOKEN  = "credentials('SPLUNK_TOKEN')"
-        SPLUNK_HOST   = "${params.SPLUNK_HOST ?: 'https://localhost:9089'}"
+        SPLUNK_HOST   = "${params.SPLUNK_HOST ?: 'https://host.docker.internal:9089'}"
         SPLUNK_INDEX  = "${params.SPLUNK_INDEX ?: 'stopdetails-api'}"
     }
 
