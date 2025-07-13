@@ -33,6 +33,7 @@ public class PerformanceTest {
         String splunkToken = System.getProperty("splunk.token", "eyJraWQiOiJzcGx1bmsuc2VjcmV0IiwiYWxnIjoiSFM1MTIiLCJ2ZXIiOiJ2MiIsInR0eXAiOiJzdGF0aWMifQ.eyJpc3MiOiJhZG1pbiBmcm9tIDc0NTY2YjliYWI3MyIsInN1YiI6ImFkbWluIiwiYXVkIjoiYXBpIiwiaWRwIjoiU3BsdW5rIiwianRpIjoiMmZhNjgwZjliYTkzYWI3NGY1ZDMyY2E1NmVlOTViMjI3MDgwYmIwNGQ4MjNmMjFiNTg4M2JiMGQ3Zjc5OTI4ZiIsImlhdCI6MTc1MjM5MTY1NiwiZXhwIjoxNzU0OTgzNjU2LCJuYnIiOjE3NTIzOTE2NTZ9.bVief2liJAP71kJbdlcT9vxW5lcTTwxc62RyvOUNDHJlVe4N7dW3Lcu4KdY1f_DS8CorxaDexpXdy104o_EvRQ");
         String splunkHost = System.getProperty("splunk.host", "https://localhost:9089");
         String splunkIndex = System.getProperty("splunk.index", "stopdetails-api");
+        System.out.println("splunkToken: "+splunkToken);
 
         if (splunkToken == null || splunkToken.isEmpty()) {
             throw new IllegalArgumentException("Splunk token must be provided as a system property.");
