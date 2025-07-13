@@ -168,14 +168,4 @@ public class PerformanceTest {
         }
     }
 
-//    public static void main(String[] args) {
-//        try {
-//            PerformanceTest test = new PerformanceTest();
-//            test.test();  // Run the test logic
-//            System.exit(0);  //  Success
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            System.exit(1);  //  Failure
-//        }
-//    }
 }
