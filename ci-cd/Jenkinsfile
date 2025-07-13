@@ -26,14 +26,14 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'SPLUNK_TOKEN', variable: 'SPLUNK_TOKEN')]) {
                     script {
-                        env.APP_URL = (params.APP_URL?.trim()) ? params.APP_URL : 'http://host.docker.internal:8080'
-                        env.SPLUNK_HOST = (params.SPLUNK_HOST?.trim()) ? params.SPLUNK_HOST : 'https://host.docker.internal:9089'
-                        env.SPLUNK_INDEX = (params.SPLUNK_INDEX?.trim()) ? params.SPLUNK_INDEX : 'stopdetails-api'
+                        env.APP_URL = "${params.APP_URL ?: 'http://host.docker.internal:8080'}"
+                        env.SPLUNK_HOST = "${params.SPLUNK_HOST ?: 'https://host.docker.internal:9089'}"
+                        env.SPLUNK_INDEX = "${params.SPLUNK_INDEX ?: 'stopdetails-api'}"
 
                         echo "APP_URL: ${env.APP_URL}"
                         echo "SPLUNK_HOST: ${env.SPLUNK_HOST}"
                         echo "SPLUNK_INDEX: ${env.SPLUNK_INDEX}"
-                        echo "SPLUNK_TOKEN is set (hidden)"
+                        echo "SPLUNK_TOKEN: ${env.SPLUNK_TOKEN})"
                     }
                 }
             }
