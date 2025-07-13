@@ -16,6 +16,12 @@ pipeline {
     }
 
     stages {
+        stage('Checkout Test Repo') {
+            steps {
+                checkout scm
+            }
+        }
+
         stage('Setup Environment') {
             steps {
                 withCredentials([string(credentialsId: 'SPLUNK_TOKEN', variable: 'SPLUNK_TOKEN')]) {
@@ -32,22 +38,6 @@ pipeline {
                 }
             }
         }
-
-        stage('Checkout Test Repo') {
-            steps {
-                checkout scm
-            }
-        }
-
-        stage('Print parameters') {
-                    steps {
-                        // Print all variables clearly
-                        echo "APP_URL: ${env.APP_URL}"
-                        echo "SPLUNK_TOKEN: ${env.SPLUNK_TOKEN}"
-                        echo "SPLUNK_HOST: ${env.SPLUNK_HOST}"
-                        echo "SPLUNK_INDEX: ${env.SPLUNK_INDEX}"
-                    }
-                }
 
         stage('Build & Run Tests') {
             steps {
