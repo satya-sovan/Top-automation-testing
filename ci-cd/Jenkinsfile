@@ -38,11 +38,7 @@ pipeline {
 
 
                     sh """
-                         mvn clean test \\
-                              -Dapp.url=${env.APP_URL} \\
-                              -Dsplunk.token=${env.SPLUNK_TOKEN} \\
-                              -Dsplunk.host=${env.SPLUNK_HOST} \\
-                              -Dsplunk.index=${env.SPLUNK_INDEX}
+                         mvn clean test -D"app.url=${env.APP_URL}"  -D"splunk.token=${env.SPLUNK_TOKEN}"  -D"splunk.host=${env.SPLUNK_HOST}"  -D"splunk.index=${env.SPLUNK_INDEX}"
                     """
                 }
             }
