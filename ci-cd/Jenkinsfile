@@ -22,14 +22,20 @@ pipeline {
             }
         }
 
+        stage('Print parameters') {
+                    steps {
+                        // Print all variables clearly
+                        echo "APP_URL: ${env.APP_URL}"
+                        echo "SPLUNK_TOKEN: ${env.SPLUNK_TOKEN ? '***masked***' : 'Not Provided'}"
+                        echo "SPLUNK_HOST: ${env.SPLUNK_HOST}"
+                        echo "SPLUNK_INDEX: ${env.SPLUNK_INDEX}"
+                    }
+                }
+
         stage('Build & Run Tests') {
             steps {
                 withMaven(maven: 'Maven 3') {
-                    // Print all variables clearly
-                    echo "APP_URL: ${env.APP_URL}"
-                    echo "SPLUNK_TOKEN: ${env.SPLUNK_TOKEN ? '***masked***' : 'Not Provided'}"
-                    echo "SPLUNK_HOST: ${env.SPLUNK_HOST}"
-                    echo "SPLUNK_INDEX: ${env.SPLUNK_INDEX}"
+
 
                     sh """
                          mvn clean test \\
