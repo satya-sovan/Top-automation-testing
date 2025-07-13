@@ -3,14 +3,14 @@ pipeline {
 
     parameters {
         string(name: 'APP_URL', defaultValue: '', description: 'App base URL')
-        string(name: 'SPLUNK_TOKEN', defaultValue: '', description: 'Splunk Token')
+        //string(name: 'SPLUNK_TOKEN', defaultValue: '', description: 'Splunk Token')
         string(name: 'SPLUNK_HOST', defaultValue: '', description: 'Splunk Host')
         string(name: 'SPLUNK_INDEX', defaultValue: '', description: 'Splunk Index')
     }
 
     environment {
         APP_URL       = "${params.APP_URL ?: 'http://localhost:8080'}"
-        SPLUNK_TOKEN  = "${params.SPLUNK_TOKEN ?: credentials('SPLUNK_TOKEN')}"
+        SPLUNK_TOKEN  = "credentials('SPLUNK_TOKEN')"
         SPLUNK_HOST   = "${params.SPLUNK_HOST ?: 'https://localhost:9089'}"
         SPLUNK_INDEX  = "${params.SPLUNK_INDEX ?: 'stopdetails-api'}"
     }
