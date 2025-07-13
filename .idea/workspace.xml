@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="20ade06d-e2ea-44e9-ae08-2e18f7df873d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ci-cd/Jenkinsfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/top/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/top/MainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/top/PerformanceTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2zpFVCDSLhuX8A85vsnFe667d2J" />
+  <component name="ProjectViewState">
+    <option name="flattenModules" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.PerformanceTest.executor": "Run",
+    "Maven.Top-automation-testing [clean].executor": "Run",
+    "Maven.Top-automation-testing [compile].executor": "Run",
+    "Maven.Top-automation-testing [install].executor": "Run",
+    "Maven.Top-automation-testing [package].executor": "Run",
+    "Maven.Top-automation-testing [test].executor": "Run",
+    "Maven.Top-automation-testing [validate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.PerformanceTest.test.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Dev/Top-automation-testing"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.top" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.PerformanceTest">
+    <configuration name="PerformanceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.top.PerformanceTest" />
+      <module name="Top-automation-testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.top.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PerformanceTest.test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Top-automation-testing" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.top.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.top" />
+      <option name="MAIN_CLASS_NAME" value="com.top.PerformanceTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <envs>
+        <env name="splunk.token" value="eyJraWQiOiJzcGx1bmsuc2VjcmV0IiwiYWxnIjoiSFM1MTIiLCJ2ZXIiOiJ2MiIsInR0eXAiOiJzdGF0aWMifQ.eyJpc3MiOiJhZG1pbiBmcm9tIDc0NTY2YjliYWI3MyIsInN1YiI6ImFkbWluIiwiYXVkIjoiYXBpIiwiaWRwIjoiU3BsdW5rIiwianRpIjoiMmZhNjgwZjliYTkzYWI3NGY1ZDMyY2E1NmVlOTViMjI3MDgwYmIwNGQ4MjNmMjFiNTg4M2JiMGQ3Zjc5OTI4ZiIsImlhdCI6MTc1MjM5MTY1NiwiZXhwIjoxNzU0OTgzNjU2LCJuYnIiOjE3NTIzOTE2NTZ9.bVief2liJAP71kJbdlcT9vxW5lcTTwxc62RyvOUNDHJlVe4N7dW3Lcu4KdY1f_DS8CorxaDexpXdy104o_EvRQ" />
+      </envs>
+      <properties>
+        <property name="splunk.token" value="eyJraWQiOiJzcGx1bmsuc2VjcmV0IiwiYWxnIjoiSFM1MTIiLCJ2ZXIiOiJ2MiIsInR0eXAiOiJzdGF0aWMifQ.eyJpc3MiOiJhZG1pbiBmcm9tIDc0NTY2YjliYWI3MyIsInN1YiI6ImFkbWluIiwiYXVkIjoiYXBpIiwiaWRwIjoiU3BsdW5rIiwianRpIjoiMmZhNjgwZjliYTkzYWI3NGY1ZDMyY2E1NmVlOTViMjI3MDgwYmIwNGQ4MjNmMjFiNTg4M2JiMGQ3Zjc5OTI4ZiIsImlhdCI6MTc1MjM5MTY1NiwiZXhwIjoxNzU0OTgzNjU2LCJuYnIiOjE3NTIzOTE2NTZ9.bVief2liJAP71kJbdlcT9vxW5lcTTwxc62RyvOUNDHJlVe4N7dW3Lcu4KdY1f_DS8CorxaDexpXdy104o_EvRQ" />
+      </properties>
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.PerformanceTest" />
+      <item itemvalue="TestNG.PerformanceTest.test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PerformanceTest" />
+        <item itemvalue="TestNG.PerformanceTest.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20ade06d-e2ea-44e9-ae08-2e18f7df873d" name="Changes" comment="" />
+      <created>1752420128209</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752420128209</updated>
+    </task>
+    <servers />
+  </component>
+</project>

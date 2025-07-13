@@ -1,0 +1,51 @@
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'APP_URL', defaultValue: '', description: 'App base URL')
+        string(name: 'SPLUNK_TOKEN', defaultValue: '', description: 'Splunk Token')
+        string(name: 'SPLUNK_HOST', defaultValue: '', description: 'Splunk Host')
+        string(name: 'SPLUNK_INDEX', defaultValue: '', description: 'Splunk Index')
+    }
+
+    environment {
+        APP_URL       = "${params.APP_URL ?: 'http://localhost:8080'}"
+        SPLUNK_TOKEN  = "${params.SPLUNK_TOKEN ?: credentials('splunk-token')}"
+        SPLUNK_HOST   = "${params.SPLUNK_HOST ?: 'https://localhost:9089'}"
+        SPLUNK_INDEX  = "${params.SPLUNK_INDEX ?: 'stopdetails-api'}"
+    }
+
+    stages {
+        stage('Checkout Test Repo') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build & Run Tests') {
+            steps {
+                withMaven(maven: 'Maven 3') {
+                    sh """
+                        mvn clean test \
+                          -Dapp.url=${APP_URL} \
+                          -Dsplunk.token=${SPLUNK_TOKEN} \
+                          -Dsplunk.host=${SPLUNK_HOST} \
+                          -Dsplunk.index=${SPLUNK_INDEX}
+                    """
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            junit '**/target/surefire-reports/*.xml'
+        }
+        failure {
+            echo 'Automation test failed.'
+        }
+        success {
+            echo 'Automation test passed.'
+        }
+    }
+}
