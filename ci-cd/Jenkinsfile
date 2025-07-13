@@ -10,9 +10,9 @@ pipeline {
 
     environment {
         // These will be overridden in script block
-        APP_URL      = ''
-        SPLUNK_HOST  = ''
-        SPLUNK_INDEX = ''
+        APP_URL      = "${params.APP_URL ?: 'http://host.docker.internal:8080'}"
+        SPLUNK_HOST  = "${params.SPLUNK_HOST ?: 'https://host.docker.internal:9089'}"
+        SPLUNK_INDEX = "${params.SPLUNK_INDEX ?: 'stopdetails-api'}"
     }
 
     stages {
@@ -26,10 +26,6 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'SPLUNK_TOKEN', variable: 'SPLUNK_TOKEN')]) {
                     script {
-                        env.APP_URL = "${params.APP_URL ?: 'http://host.docker.internal:8080'}"
-                        env.SPLUNK_HOST = "${params.SPLUNK_HOST ?: 'https://host.docker.internal:9089'}"
-                        env.SPLUNK_INDEX = "${params.SPLUNK_INDEX ?: 'stopdetails-api'}"
-
                         echo "APP_URL: ${env.APP_URL}"
                         echo "SPLUNK_HOST: ${env.SPLUNK_HOST}"
                         echo "SPLUNK_INDEX: ${env.SPLUNK_INDEX}"
