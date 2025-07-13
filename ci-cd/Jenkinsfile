@@ -38,9 +38,6 @@ pipeline {
     }
 
     post {
-        always {
-            junit '**/target/surefire-reports/*.xml'
-        }
         failure {
             echo 'Automation test failed.'
         }
