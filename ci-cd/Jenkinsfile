@@ -26,7 +26,7 @@ pipeline {
                     steps {
                         // Print all variables clearly
                         echo "APP_URL: ${env.APP_URL}"
-                        echo "SPLUNK_TOKEN: ${env.SPLUNK_TOKEN ? '***masked***' : 'Not Provided'}"
+                        echo "SPLUNK_TOKEN: ${env.SPLUNK_TOKEN}"
                         echo "SPLUNK_HOST: ${env.SPLUNK_HOST}"
                         echo "SPLUNK_INDEX: ${env.SPLUNK_INDEX}"
                     }
