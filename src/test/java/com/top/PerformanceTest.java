@@ -138,9 +138,9 @@ public class PerformanceTest {
                                     if (!found) {
                                         throw new RuntimeException("Splunk log not found or status not SUCCESS for correlationId: " + cid);
                                     }
-                                }).language("java")
+                                }).language("java"),
 
-                                //resultsTreeVisualizer()
+                                resultsTreeVisualizer()
                         )
                 ).run();
 
